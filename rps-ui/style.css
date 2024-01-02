@@ -14,7 +14,7 @@ body {
 main {
   container-type: inline-size;
   container-name: mainContainer;
-  height: 70%;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -124,12 +124,12 @@ main svg.right#rockDrawing > path, main svg.right#paperDrawing > path, main svg.
   }
 }
 footer {
-  height: 30%;
+  height: 50%;
   container-type: size;
   container-name: footer;
   display: flex;
   justify-content: center;
-  color: white;
+  color: #dffffc;
   text-align: center;
   white-space: pre-wrap;
 }
@@ -162,7 +162,7 @@ footer .scoresAndMessages > *:last-child {
 }
 footer .reset {
   background-color: transparent;
-  color: white;
+  color: #dffffc;
   padding: 0.8em 1.2em;
   font-size: 0.5em;
   border: 1px solid #dffffc;
@@ -171,7 +171,7 @@ footer .reset {
   position: relative;
 }
 footer .reset:hover {
-  background-color: white;
+  background-color: #dffffc;
   color: #f88379;
 }
 footer .reset:active {

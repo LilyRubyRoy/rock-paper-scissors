@@ -1,7 +1,8 @@
 $svg-size: 100% * 0.3333;
-$footer-size: 30%;
+$footer-size: 50%;
 $main-size: 100% - $footer-size;
-
+$clr-text-white: #dffffc;
+$clr-base-pink: #f88379;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +13,7 @@ $main-size: 100% - $footer-size;
 
 body {
   height: 100vh;
-  background-color: #f88379;
+  background-color: $clr-base-pink;
 }
 
 main {
@@ -52,7 +53,7 @@ main {
   }
 
   svg {
-    fill: #dffffc;
+    fill: $clr-text-white;
     pointer-events: none;
 
     path {
@@ -157,7 +158,7 @@ footer {
   container-name: footer;
   display: flex;
   justify-content: center;
-  color: white;
+  color: $clr-text-white;
   text-align: center;
   white-space: pre-wrap;
 
@@ -168,8 +169,8 @@ footer {
     max-width: 1200px;
     max-height: 250px;
     min-height: 115px;
-    border-top: 20px solid #dffffc;
-    border-bottom: 20px solid #dffffc;
+    border-top: 20px solid $clr-text-white;
+    border-bottom: 20px solid $clr-text-white;
     font-size: 2em;
 
     .userSection,
@@ -183,27 +184,27 @@ footer {
 
     & > * {
       flex: 1;
-      border-left: 20px solid #dffffc;
+      border-left: 20px solid $clr-text-white;
     }
     & > *:last-child {
       flex: 1;
-      border-right: 20px solid #dffffc;
+      border-right: 20px solid $clr-text-white;
     }
   }
 
   .reset {
     background-color: transparent;
-    color: white;
+    color: $clr-text-white;
     padding: 0.8em 1.2em;
     font-size: 0.5em;
-    border: 1px solid #dffffc;
+    border: 1px solid $clr-text-white;
     display: inline-flex;
     align-items: center;
     position: relative;
 
     &:hover {
-      background-color: white;
-      color: #f88379;
+      background-color: $clr-text-white;
+      color: $clr-base-pink;
     }
 
     &:active {
