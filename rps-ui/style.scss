@@ -1,0 +1,213 @@
+$svg-size: 100% * 0.3333;
+$footer-size: 30%;
+$main-size: 100% - $footer-size;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "borelregular", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #f88379;
+}
+
+main {
+  container-type: inline-size;
+  container-name: mainContainer;
+  height: $main-size;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  .choices {
+    flex: 1;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    position: relative;
+  }
+
+  button {
+    flex: 1;
+    position: relative;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:active {
+      top: 5px;
+    }
+
+    &:hover svg > path {
+      stroke: #17817d;
+    }
+  }
+
+  svg {
+    fill: #dffffc;
+    pointer-events: none;
+
+    path {
+      pointer-events: none;
+    }
+
+    &.up {
+      &#rockDrawing path {
+        transform-origin: center;
+        transform: rotate(-100deg);
+      }
+
+      &#paperDrawing > path {
+        transform-origin: center;
+        transform: rotate(-90deg);
+      }
+
+      &#scissorsDrawing > path {
+        transform-origin: center;
+        transform: rotate(-90deg);
+      }
+    }
+    &.left {
+      &#rockDrawing > path,
+      &#paperDrawing > path,
+      &#scissorsDrawing > path {
+        transform-origin: center;
+        transform: rotateY(3.142rad);
+      }
+    }
+    &.right {
+      &#rockDrawing > path,
+      &#paperDrawing > path,
+      &#scissorsDrawing > path {
+        transform-origin: center;
+        transform: rotateY(0);
+      }
+    }
+  }
+}
+
+.animate {
+  animation-name: animate;
+  animation-duration: 4.5s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+
+@keyframes animate {
+  0% {
+    top: 0;
+  }
+  15% {
+    top: -100vh;
+  }
+  30% {
+    top: 0;
+  }
+  50% {
+    top: 0;
+  }
+  70% {
+    top: -100vh;
+  }
+  90% {
+    top: 0;
+  }
+}
+
+@container mainContainer (max-width: 800px) {
+  body main .choices {
+    gap: 10px;
+  }
+}
+
+@container footer (max-width: 700px) or (height <= 220px) {
+  body footer .scoresAndMessages {
+    font-size: 1.5em;
+  }
+}
+@container footer (height <= 180px) {
+  body footer .scoresAndMessages {
+    font-size: 1em;
+  }
+}
+
+@container footer (max-width: 650px) and (height <= 180px) {
+  body footer .scoresAndMessages {
+    font-size: 1em;
+  }
+}
+
+@container footer (max-width: 500px) {
+  body footer .scoresAndMessages {
+    font-size: 0.8em;
+  }
+}
+
+footer {
+  height: $footer-size;
+  container-type: size;
+  container-name: footer;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  white-space: pre-wrap;
+
+  .scoresAndMessages {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    max-height: 250px;
+    min-height: 115px;
+    border-top: 20px solid #dffffc;
+    border-bottom: 20px solid #dffffc;
+    font-size: 2em;
+
+    .userSection,
+    .messages,
+    .computerSection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & > * {
+      flex: 1;
+      border-left: 20px solid #dffffc;
+    }
+    & > *:last-child {
+      flex: 1;
+      border-right: 20px solid #dffffc;
+    }
+  }
+
+  .reset {
+    background-color: transparent;
+    color: white;
+    padding: 0.8em 1.2em;
+    font-size: 0.5em;
+    border: 1px solid #dffffc;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+
+    &:hover {
+      background-color: white;
+      color: #f88379;
+    }
+
+    &:active {
+      top: 2px;
+    }
+  }
+}
