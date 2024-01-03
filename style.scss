@@ -55,6 +55,8 @@ main {
   svg {
     fill: $clr-text-white;
     pointer-events: none;
+    height: 100%;
+    width: 100%;
 
     path {
       pointer-events: none;

@@ -46,6 +46,8 @@ main button:hover svg > path {
 main svg {
   fill: #dffffc;
   pointer-events: none;
+  height: 100%;
+  width: 100%;
 }
 main svg path {
   pointer-events: none;
