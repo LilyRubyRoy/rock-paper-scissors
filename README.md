@@ -1,7 +1,7 @@
 # Rock, Paper, Scissors Project! 
 
 A live implementation of the project can be found on this 
-[GitHub Pages link](https://emannuelmartineztest.github.io/rock-paper-scissors/).
+[GitHub Pages link](https://lilyrubyroy.github.io/rock-paper-scissors/).
 
 ![A round of Rock, Paper, Scissors](./assets/preview.gif)
 
